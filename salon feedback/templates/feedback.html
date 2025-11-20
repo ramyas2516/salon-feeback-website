@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Final Feedback</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="site-title">Mckingstown</div>
+
+<div class="container">
+    <h2>Your Feedback</h2>
+  
+    <form action="/submit" method="POST">
+
+        <!-- Keep previous values -->
+        <input type="hidden" name="rating" value="{{ rating }}">
+        <input type="hidden" name="service" value="{{ service }}">
+        <input type="hidden" name="employee" value="{{ employee }}">
+
+        <label>Your Feedback:</label>
+        <textarea name="feedback" required></textarea>
+
+        <br><br>
+
+        <label >Your Name (optional):</label>
+        <input class="feedback_name" type="text" name="name">
+
+        <button type="submit">Submit →</button>
+    </form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rate Your Experience</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Neon Title Styling */
+        .site-title {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #00f7ff;
+            text-shadow: 0 0 20px #00f7ff, 0 0 40px #00f7ff;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+   
+<!-- 🔥 Title Outside the Box -->
+<div class="site-title">Mckingstown</div>
+
+<div class="container">
+    <h2>Rate Your Experience ⭐</h2>
+
+    <form action="/service" method="POST">
+
+        <div class="stars">
+            <label>
+                <input type="radio" name="rating" value="1">
+                <span class="star">★</span>
+            </label>
+
+            <label>
+                <input type="radio" name="rating" value="2">
+                <span class="star">★</span>
+            </label>
+
+            <label>
+                <input type="radio" name="rating" value="3">
+                <span class="star">★</span>
+            </label>
+
+            <label>
+                <input type="radio" name="rating" value="4">
+                <span class="star">★</span>
+            </label>
+
+            <label>
+                <input type="radio" name="rating" value="5">
+                <span class="star">★</span>
+            </label>
+        </div>
+
+        <button type="submit">Next →</button>
+
+    </form>
+</div>
+
+<script>
+    const stars = document.querySelectorAll('.star');
+
+    stars.forEach((star, index) => {
+        star.addEventListener('click', () => {
+            stars.forEach(s => s.classList.remove('active'));
+            for (let i = 0; i <= index; i++) {
+                stars[i].classList.add('active');
+            }
+        });
+    }); 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* Group styling */
+.option-group {
+    margin-top: 10px;
+}
+
+/* Each glowing option card */
+.option-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 247, 255, 0.3);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Checkbox + radio visible */
+.option-item input[type="checkbox"],
+.option-item input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.option-item:hover {
+    box-shadow: 0 0 12px #00f7ff;
+}
+
+/* Selected glowing effect */
+.option-item input[type="checkbox"]:checked + span,
+.option-item input[type="radio"]:checked + span {
+    color: #00f7ff;
+    text-shadow: 0 0 15px #00f7ff;
+}

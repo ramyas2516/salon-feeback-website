@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choose Service</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='option.css') }}">
+</head>
+<body>
+  <div class="site-title">Mckingstown</div>
+
+<div class="container">
+    <h2>Select Service & Employee</h2>
+
+    <form action="/feedback" method="POST">
+
+        <!-- Keep rating from Page 1 -->
+        <input type="hidden" name="rating" value="{{ rating }}">
+
+        <!-- SERVICES -->
+        <h3>Choose Services:</h3>
+
+        <div class="option-group">
+            <label class="option-item">
+                <input type="checkbox" name="service" value="Haircut">
+                <span>Haircut</span>
+            </label>
+
+            <label class="option-item">
+                <input type="checkbox" name="service" value="Facial">
+                <span>Facial</span>
+            </label>
+
+            <label class="option-item">
+                <input type="checkbox" name="service" value="Pedicure">
+                <span>Pedicure</span>
+            </label>
+
+            <label class="option-item">
+                <input type="checkbox" name="service" value="Manicure">
+                <span>Manicure</span>
+            </label>
+        </div>
+
+        <!-- EMPLOYEES -->
+        <h3>Choose Employee:</h3>
+
+        <div class="option-group">
+            <label class="option-item">
+                <input type="radio" name="employee" value="Ramya" required>
+                <span>Ramya</span>
+            </label>
+
+            <label class="option-item">
+                <input type="radio" name="employee" value="Priya">
+                <span>Priya</span>
+            </label>
+
+            <label class="option-item">
+                <input type="radio" name="employee" value="Suman">
+                <span>Suman</span>
+            </label>
+
+            <label class="option-item">
+                <input type="radio" name="employee" value="Karthik">
+                <span>Karthik</span>
+            </label>
+        </div>
+
+        <button type="submit">Next →</button>
+    </form>
+
+</div>
+
+</body>
+</html>
